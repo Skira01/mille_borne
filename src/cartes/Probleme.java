@@ -3,9 +3,9 @@ package cartes;
 public abstract class Probleme extends Carte {
 
 	enum Type {FEU, ESSENCE, CREVAISON, ACCIDENT};
-	protected Type t;
+	public Type t;
 	
-	public Probleme(int nombre, Type t) {
+	protected Probleme(int nombre, Type t) {
 		super(nombre);
 		this.t = t;
 	}

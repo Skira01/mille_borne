@@ -80,7 +80,7 @@ public class Sabot implements Iterator<Carte> {
 
         private void checkForConcurrentModification() {
             if (modificationCount != expectedModificationCount) {
-                throw new ConcurrentModificationException("Le sabot a Ã©tÃ© modifiÃ© de maniÃ¨re concurrente.");
+                throw new ConcurrentModificationException("Le sabot a été modifié de manière concurrente.");
             }
         }
         

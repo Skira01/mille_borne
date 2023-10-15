@@ -1,4 +1,5 @@
 package cartes;
+import java.util.Objects;
 
 public class Attaque extends Bataille {
 
@@ -19,9 +20,19 @@ public class Attaque extends Bataille {
 			return("Accident");
 		
 		default:
-			break;
+			break;	
 		}
 		return null;
 	}
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Attaque attaque = (Attaque) obj;
+        return Objects.equals(t, attaque.t);
+    }
 
 }

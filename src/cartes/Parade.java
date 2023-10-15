@@ -1,5 +1,7 @@
 package cartes;
 
+import java.util.Objects;
+
 public class Parade extends Bataille {
 
 	public Parade(int nombre, Type t) {
@@ -24,4 +26,15 @@ public class Parade extends Bataille {
 		return null;
 	}
 
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Parade parade = (Parade) obj;
+        return Objects.equals(t, parade.t);
+    }
+	
 }

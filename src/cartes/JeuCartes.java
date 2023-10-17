@@ -1,12 +1,11 @@
 package cartes;
 
+import java.util.ArrayList;
+import utils.Utils;
+
 public class JeuCartes {
-	
-	private Carte[] typesDeCartes;
 
-    public JeuCartes() {
-
-    	typesDeCartes = new Carte[] {
+    private Carte[] typesDeCartes = new Carte[]{
             new Attaque(5, Attaque.Type.FEU),
             new Attaque(3, Attaque.Type.ESSENCE),
             new Attaque(3, Attaque.Type.CREVAISON),
@@ -24,11 +23,49 @@ public class JeuCartes {
             new Botte(1, Botte.Type.ESSENCE),
             new Botte(1, Botte.Type.CREVAISON),
             new Botte(1, Botte.Type.ACCIDENT),
-        };
+    };
+    
+    private ArrayList<Carte> listeCartes;
+    
+    
+
+    public JeuCartes() {
+
+        listeCartes = new ArrayList<>();
+        for (Carte carte : typesDeCartes) {
+            int nombreExemplaires = carte.getNombre();
+            for (int i = 0; i < nombreExemplaires; i++) {
+                listeCartes.add(carte);
+            }
+        }
+        
+        Utils.mélanger(listeCartes);
+        
     }
 
-    public Carte[] getTypesDeCartes() {
-        return typesDeCartes;
+    public ArrayList<Carte> getListeCartes() {
+        return listeCartes;
+    }
+    
+    public void checkCount() {
+        System.out.println("Vérification du nombre d'exemplaires pour chaque type de carte :\n");
+
+        for (Carte carte : typesDeCartes) {
+            int nombreExemplairesAttendu = carte.getNombre();
+            int nombreExemplairesTrouve = 0;
+
+            for (Carte carteListe : listeCartes) {
+                if (carteListe.equals(carte)) {
+                    nombreExemplairesTrouve++;
+                }
+            }
+
+            if (nombreExemplairesAttendu == nombreExemplairesTrouve) {
+                System.out.println(carte.toString() + " : OK");
+            } else {
+                System.out.println(carte.toString() + " : ERREUR - Attendu : " + nombreExemplairesAttendu + ", Trouvé : " + nombreExemplairesTrouve);
+            }
+        }
     }
 
 }

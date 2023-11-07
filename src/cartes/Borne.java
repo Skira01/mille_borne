@@ -1,5 +1,7 @@
 package cartes;
 
+import cartes.Probleme.Type;
+
 public class Borne extends Carte {
 	private int km;
 	
@@ -45,5 +47,11 @@ public class Borne extends Carte {
 	        Borne borne = (Borne) obj;
 	        return km == borne.km;
 	    }
+
+	@Override
+	public Type getT() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

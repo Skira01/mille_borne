@@ -1,5 +1,7 @@
 package cartes;
 
+import cartes.Probleme.Type;
+
 public class DebutLimite extends Limite {
 
 	public DebutLimite(int nombre) {
@@ -15,5 +17,11 @@ public class DebutLimite extends Limite {
         DebutLimite debutLimite = (DebutLimite) obj;
         return debutLimite.getNombre() == getNombre();
     }
+
+	@Override
+	public Type getT() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

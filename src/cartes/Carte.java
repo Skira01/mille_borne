@@ -1,5 +1,7 @@
 package cartes;
 
+import cartes.Probleme.Type;
+
 public abstract class Carte {
 	
 	private int nombre;
@@ -15,4 +17,6 @@ public abstract class Carte {
 	public void setNombre(int nombre) {
 		this.nombre = nombre;
 	}
+
+	public abstract Type getT();
 }

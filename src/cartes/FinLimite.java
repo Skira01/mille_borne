@@ -1,5 +1,7 @@
 package cartes;
 
+import cartes.Probleme.Type;
+
 public class FinLimite extends Limite {
 
 	public FinLimite(int nombre) {
@@ -15,5 +17,11 @@ public class FinLimite extends Limite {
         FinLimite finLimite = (FinLimite) obj;
         return finLimite.getNombre() == getNombre();
     }
+
+	@Override
+	public Type getT() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

@@ -31,6 +31,10 @@ public class Joueur {
     }
     
     public int getKM() {
+    	System.out.println(bornes.size());
+    	for(int i=0; i < bornes.size(); i++) {
+    		kmParcourus+=bornes.get(i).getKm();
+    	}
         return kmParcourus;
     }
 
@@ -115,6 +119,22 @@ public class Joueur {
         }
 
         return true;
+    }
+    
+    public void prendreCarte(Carte carte) {
+    	main.prendre(carte);
+    	if(carte instanceof Bataille) {
+    		bataille.add(carte);
+    	}
+    	else if(carte instanceof Borne) {
+    		bornes.add(carte);
+    	}
+    	else if(carte instanceof Botte) {
+    		bottes.add(carte);
+    	}
+    	else if(carte instanceof Limite) {
+    		limitesDeVitesse.add(carte);
+    	}
     }
     
     

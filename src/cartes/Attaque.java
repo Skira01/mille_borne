@@ -35,4 +35,10 @@ public class Attaque extends Bataille {
         return Objects.equals(t, attaque.t);
     }
 
+	@Override
+	public int getKm() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

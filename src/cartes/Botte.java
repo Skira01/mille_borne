@@ -36,4 +36,10 @@ public class Botte extends Probleme {
 	        return Objects.equals(t, botte.t);
 	    }
 
+	@Override
+	public int getKm() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

@@ -23,7 +23,7 @@ public class UtilsTest {
     public static void testVerifierMelange(List<Carte> listeCartes) {
         List<Carte> listeMelangee = new ArrayList<>(listeCartes);
 
-        Utils.mélanger(listeMelangee);
+        Utils.melanger(listeMelangee);
 
         if (Utils.verifierMelange(listeCartes, listeMelangee)) {
             System.out.println("Le mélange a préservé le nombre d'occurrences pour chaque élément.");

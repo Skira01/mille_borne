@@ -32,7 +32,7 @@ public class Utils {
         }
     }
 
-    public static <T> List<T> mélanger(List<T> liste) {
+    public static <T> List<T> melanger(List<T> liste) {
         Collections.shuffle(liste);
         return liste;
     }

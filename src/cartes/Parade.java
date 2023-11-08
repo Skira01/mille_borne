@@ -36,5 +36,11 @@ public class Parade extends Bataille {
         Parade parade = (Parade) obj;
         return Objects.equals(t, parade.t);
     }
+
+	@Override
+	public int getKm() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

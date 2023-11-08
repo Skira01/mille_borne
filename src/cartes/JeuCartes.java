@@ -39,7 +39,7 @@ public class JeuCartes {
             }
         }
         
-        Utils.mélanger(listeCartes);
+        Utils.melanger(listeCartes);
         
     }
 

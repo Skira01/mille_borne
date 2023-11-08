@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import cartes.Botte;
 import cartes.Carte;
 
 public class MainAsListe implements Main {
@@ -35,4 +36,4 @@ public class MainAsListe implements Main {
         return main.iterator();
     }
 
-}
+} 

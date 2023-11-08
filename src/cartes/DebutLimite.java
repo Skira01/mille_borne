@@ -24,4 +24,10 @@ public class DebutLimite extends Limite {
 		return null;
 	}
 
+	@Override
+	public int getKm() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

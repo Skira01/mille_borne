@@ -19,4 +19,6 @@ public abstract class Carte {
 	}
 
 	public abstract Type getT();
+
+	public abstract int getKm();
 }
